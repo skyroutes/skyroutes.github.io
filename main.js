@@ -12,7 +12,7 @@ var myApp = {
     
     "force_install": "false",
 
-    "force_network": "false",
+    "force_network": "true",
 
     "route_error": "hold",
 
