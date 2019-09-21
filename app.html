@@ -1,0 +1,205 @@
+<section id="home" class="irt">
+    <header>
+        <h1>SkyRoutes</h1>
+        <p>A new take on Progressive Web Apps</p>
+    </header>
+
+    <img src="/assets/srs.jpeg">
+
+    <div id="tabs">
+        <button onclick="nav('features')">Features</button>
+        <button onclick="nav('doc')">Documentation</button>
+        <button onclick="nav('changelog')">Changelog</button>
+        <button onclick="nav('about')">About</button>
+    </div>
+
+</section>
+
+<section id="features" class="rt">
+    <header><button id="hm" onclick="nav('')">🏠</button>Skyroutes
+        <p>Feature Showcase</p>
+    </header>
+
+    <div>
+        <div class="card">
+            <b>🚦 SPA Router</b>
+            <p>Combining URI Paths with HTML blocks as views we've got a one of a kind Single Page Router
+                implementation. The idea is to avoid writing multiple html pages with repeating boilerplate.</p>
+        </div>
+
+        <div class="card">
+            <b>♻️ Asset State Management</b>
+            <p>With the timed atomic updates the app assets are always fresh, edits in files are detected and they are
+                updated on the go. You can still tinker the service worker for whole app upgrades (SkyRoutes 1.2).</p>
+        </div>
+
+        <div class="card">
+            <b>🔥 Hot Reloader</b>
+            <p>The app can be hot-reloaded based on focus change, saves your extra key presses. We've got css-only,
+                silent and full reload as possible options.</p>
+        </div>
+
+        <div class="card">
+            <b>🌐 Network Handling</b>
+            <p>We can force our app to only run with an active internet connection and also detect network changes. The
+                opposite is already key feature of PWAs!</p>
+        </div>
+
+        <div class="card">
+            <b>🔍 PWA State</b>
+            <p>We can force our users to install the PWA / add it to HomeScreen, It helps if you want to provide a
+                native app experience.</p>
+        </div>
+
+        <div class="card">
+            <b>🙌 Go Console Free</b>
+            <p>Inspired by Flutter, errors in your code are displayed on the app screen!</p>
+        </div>
+
+        <div class="card">
+            <b>🔓 Completely Hackable</b>
+            <p>The framework is written from scratch in vanilla JavaScript and it's OpenSource.</p>
+        </div>
+
+        <div class="card">
+            <b>🍚 Based on Minimalism</b>
+            <p>Despite being more than a router, all the implementations are straight-forward and designed for helping
+                with
+                fast prototyping to production. With the beginner friendly starter-kit and single Object based
+                declaration an app can
+                be built in no time. </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="doc" class="rt">
+    <header><button id="hm" onclick="nav('')">🏠</button>Skyroutes
+        <p>Documentation</p>
+    </header>
+    <div id="dwrap">
+        <span>Sample App Structure</span>
+        <img src="/assets/doc1.png">
+        <br><br>
+        <span>App Core</span>
+        <ul>
+            <li><b>index.html</b> is used as a container, only add meta info and dependencies to this file</li>
+            <li><b>app.html</b> is where for the usual markup goes, this is automatically injected into index.html </li>
+            <li><b>main.js</b> is used as the entry point for JavaScript</li>
+            <li><b>mainfest.json</b> provides PWA's info to the Browser, update this file accordingly</li>
+            <li><b>sw.js</b> is our service worker file, SkyRoutes takes care of everything here, only to push a force
+                upgrade edit the force_upgrade_string</li>
+        </ul>
+
+        <span>Note</span>
+        <ul>
+            <li>The location of the core files is crucial for the framework to function</li>
+            <li>In the current release SkyRoutes is designed to only work under a root domain (example.com), it will not
+                work with subdomains (example.com/pwa)</li>
+        </ul>
+
+        <span>Initializing our app</span>
+        <img src="/assets/doc2.png">
+        <span>We need to initialize a myApp Object in our main.js file</span>
+        <div id="tabc">
+            <table>
+                <tr>
+                    <th>Propery</th>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Valid or empty String</td>
+                    <td>App name for splash screen, on empty defaults to 'SkyRoutes'</td>
+                </tr>
+                <tr>
+                    <td>author</td>
+                    <td>String</td>
+                    <td>For reference</td>
+                </tr>
+                <tr>
+                    <td>logo</td>
+                    <td>Valid path as String or empty</td>
+                    <td>App logo for splash screen, on empty deafults to skyroutes logo</td>
+                </tr>
+                <tr>
+                    <td>assets</td>
+                    <td>Array of Valid paths as String</td>
+                    <td>This is used for specifing files to be cached by the PWA, you can edit this string anytime, on
+                        empty array the whole app cache is erased</td>
+                </tr>
+                <tr>
+                    <td>hot_reload</td>
+                    <td>css/silent/full/false</td>
+                    <td>refresh css / refresh html and css / reload app / disabled based on focus change</td>
+                </tr>
+
+                <tr>
+                    <td>force_install</td>
+                    <td>true/false</td>
+                    <td>Force user to add app to HomeScreen</td>
+                </tr>
+
+                <tr>
+                    <td>force_network</td>
+                    <td>true/false</td>
+                    <td>App dependent on active internet connection</td>
+                </tr>
+
+                <tr>
+                    <td>route_error</td>
+                    <td>hold/free</td>
+                    <td>Client grabs navigation upon incorrect route (path) / usual server fetching</td>
+                </tr>
+
+                <tr>
+                    <td>update_interval</td>
+                    <td>-1/0/int in minutes</td>
+                    <td>atomic updates disabled / atomic updates every reload / atomic updates after duration (in
+                        minutes)</td>
+                </tr>
+
+                <tr>
+                    <td>anti_scrape</td>
+                    <td>true/false</td>
+                    <td>(WIP) Halt app if being web scraped</td>
+                </tr>
+
+                <tr>
+                    <td>change</td>
+                    <td>String</td>
+                    <td>For internal reference</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <span>Note: pathEvents passes the current route which can be used in some way by the app logic</span>
+    </div>
+</section>
+
+<section id="changelog" class="rt">
+    <header><button id="hm" onclick="nav('')">🏠</button>Skyroutes
+        <p>Changelog</p>
+    </header>
+    <div class="card">
+        <p> 2.0 : Relaunch (B)</p>
+        <p> 1.5 : Dynamic router (Indexed DB)</p>
+        <p> 1.3 : Static router (Legacy)</p>
+        <p> 1.2 : SW integrated (B)</p>
+        <p> 1.0 : Hash based router (uiJS)</p>
+    </div>
+</section>
+
+<section id="about" class="rt">
+    <header><button id="hm" onclick="nav('')">🏠</button>Skyroutes
+        <p>About</p>
+        
+    </header>
+    <div class="card">
+        A lightweight framework for creating PWAs in a different way.
+        <br><br><a href="https://medium.com/@_aakashpandey/introducing-skyroutes-client-side-router-for-pwas-80416d235492">Learn more</a><br><br>
+        <a href="https://aakashpandey.github.io">Created by Aakash Pandey</a>
+    </div>
+</section>

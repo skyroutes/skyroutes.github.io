@@ -1,0 +1,43 @@
+<!--
+    ___         __              __       ____                  __
+   /   | ____ _/ /______ ______/ /_     / __ \____ _____  ____/ /__  __  __
+  / /| |/ __ `/ //_/ __ `/ ___/ __ \   / /_/ / __ `/ __ \/ __  / _ \/ / / /
+ / ___ / /_/ / ,< / /_/ (__  ) / / /  / ____/ /_/ / / / / /_/ /  __/ /_/ /
+/_/  |_\__,_/_/|_|\__,_/____/_/ /_/  /_/    \__,_/_/ /_/\__,_/\___/\__, /
+                                                                  /____/
+
+All Rights Reserved : Aakash Pandey : aakash.pandey@live.com : 2019-2020
+SKYROUTES v2.0B
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lib/skyroutes.css">
+    <link rel="manifest" href="/manifest.json">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Chilanka|Fjalla+One&display=swap" rel="stylesheet">
+    <title>SkyApp</title>
+    <link rel="stylesheet" href="/style.css" class="style">
+    <script>let sr_halt=!1;window.onerror=(e,src,line,col)=>{document.querySelector('#sr_intr img').src="/assets/sr.jpeg";document.querySelector('#sr_intr div').innerText="SkyRoutes";document.querySelector('#sr_intr').style.display='block';document.querySelector('#sr_intr p').style.marginTop="30px";if(!sr_halt){document.querySelector('#sr_intr p').innerText=`Error in ${src}, at line: ${line}, col: ${col}, ${e}`;setTimeout(()=>{southBridge({req:"atomic"})},1000);sr_halt=!0}}</script>
+</head>
+
+<body>
+    <div id="sr_intr">
+        <img>
+        <div></div>
+        <p></p>
+    </div>
+    <div id="sr_main"></div>
+</body>
+
+<script defer src="/lib/skyroutes.js"></script>
+<script src="/main.js"></script>
+
+</html>

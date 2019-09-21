@@ -1,0 +1,17 @@
+{
+  "name": "SkyRoutes",
+  "short_name": "SkyRoutes",
+  "icons": [{
+    "src": "/assets/sr.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "/assets/sr.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#FFD45E"
+}
