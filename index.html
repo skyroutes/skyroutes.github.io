@@ -28,15 +28,7 @@ SKYROUTES v2.0B
     <script>let sr_halt=!1;window.onerror=(e,src,line,col)=>{document.querySelector('#sr_intr img').src="/assets/sr.jpeg";document.querySelector('#sr_intr div').innerText="SkyRoutes";document.querySelector('#sr_intr').style.display='block';document.querySelector('#sr_intr p').style.marginTop="30px";if(!sr_halt){document.querySelector('#sr_intr p').innerText=`Error in ${src}, at line: ${line}, col: ${col}, ${e}`;setTimeout(()=>{southBridge({req:"atomic"})},1000);sr_halt=!0}}</script>
 </head>
 
-<body>
-    <div id="sr_intr">
-        <img>
-        <div></div>
-        <p></p>
-    </div>
-    <div id="sr_main"></div>
-</body>
-
+<body><div id="sr_intr"><img><div></div><p></p></div><div id="sr_main"></div></body>
 <script defer src="/lib/skyroutes.js"></script>
 <script src="/main.js"></script>
 
