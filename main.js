@@ -18,7 +18,7 @@ var myApp = {
 
     "update_interval": "10",
 
-    "anti_scrape": "false",
+    "anti_scrape": "true",
 
     "change": {
         "version": ["2.0"],
