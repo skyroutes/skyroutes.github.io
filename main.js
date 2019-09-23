@@ -1,6 +1,6 @@
 var myApp = {
 
-    "name": "SkyRoutes Test Bench",
+    "name": "SkyRoutes",
     
     "author": "Aakash Pandey",
     
