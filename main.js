@@ -16,7 +16,7 @@ var myApp = {
 
     "route_error": "hold",
 
-    "update_interval": "5",
+    "update_interval": "10",
 
     "anti_scrape": "false",
 
