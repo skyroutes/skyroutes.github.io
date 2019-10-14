@@ -1,2 +1,98 @@
-/* SKYROUTES 2.0B  */
-*{margin:0;padding:0;box-sizing:border-box;border:none;webkit-tap-highlight-color:rgba(0,0,0,0)}::-moz-focus-inner,:active,:focus{outline:none;border:0;-moz-outline-style:none}*:focus{outline:none}.rt,.irt{display:none}@keyframes fade{0%{opacity:0}100%{opacity:1}}.vis{display:default;animation:fade 0.65s}.viss{display:default}#sr_intr{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;z-index:2;user-select:none;background:white;text-align:center}#sr_intr img{width:180px;height:180px;border-radius:50%;margin-top:160px}#sr_intr div{margin-top:30px;color:rgb(71,71,71);font-size:110%;font-family:'Helvetica'}#sr_intr p{margin-top:100px;font-size:105%;font-family:'Helvetica';line-height:38px;padding:30px;color:rgb(71,71,71)}@media screen and (max-height:640px){body{}#sr_intr img{margin-top:130px}#sr_intr div{margin-top:25px}#sr_intr p{margin-top:80px}}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
+
+/* test */
+
+::-moz-focus-inner, :active, :focus {
+    outline:none;
+    border:0;
+    -moz-outline-style: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.rt, .irt {
+    display: none;
+}
+
+@keyframes fade {
+    0%{opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.vis {
+    /* display: default; */
+    display: block !important;
+    animation: fade 0.65s;
+}
+
+.viss {
+    /* display: default; */
+    display: block !important;
+}
+
+#sr_intr {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    user-select: none;
+    background: white;
+    text-align: center;
+}
+
+#sr_intr img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 160px;
+}
+
+#sr_intr div {
+    margin-top: 30px;
+    color: rgb(71, 71, 71);
+    font-size: 110%;
+    font-family: 'Helvetica';
+}
+
+#sr_intr p {
+    margin-top: 100px;
+    font-size: 105%;
+    font-family: 'Helvetica';
+    line-height: 38px;
+    padding: 30px;
+    color: rgb(71, 71, 71);
+}
+
+
+@media screen and (max-height: 640px) {
+
+
+    #sr_intr img {
+
+        margin-top: 130px;
+    }
+    
+    #sr_intr div {
+        margin-top: 25px;
+    }
+    
+    #sr_intr p {
+        margin-top: 80px;
+    }
+
+
+}

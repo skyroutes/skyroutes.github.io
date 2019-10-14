@@ -1,18 +1,33 @@
 {
   "name": "SkyRoutes",
   "short_name": "SkyRoutes",
-  "icons": [{
-    "src": "/assets/sr.png",
+  "background_color": "#fff",
+  "theme_color": "#FFD45E",
+  "start_url": "",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/sr.png",
       "sizes": "128x128",
       "type": "image/png"
-    }, {
-      "src": "/assets/sr.png",
+    },
+    {
+      "src": "assets/sr.png",
       "sizes": "144x144",
       "type": "image/png"
-    }],
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#fff",
-  "theme_color": "#FFD45E"
-  
+    }
+  ],
+
+  "skyroutes": {
+    "assets": [
+      "assets/doc1.png"
+    ],
+    
+    "update_interval": "1",
+    "hot_reload": "css",
+    "route_error": "free",
+    "force_install": "false",
+    "force_network": "false"
+
+  }
 }
