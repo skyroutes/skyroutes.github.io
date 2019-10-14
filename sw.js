@@ -9,7 +9,7 @@
 
 
 const force_upgrade_string = "Let there be light";
-const sr_version = "2.0";
+const sr_version = "2.1";
 let AppCache = [];
 let AppManifest;
 let NewAppManifest;
@@ -128,7 +128,6 @@ self.addEventListener('message', async (e) => {
     if (req === 'init') {
 
         AppManifest = data.manifest;
-        Routes = data.routes;
         let root = location.pathname.replace('sw.js', '');
         AppCache = [];
         AppManifest.skyroutes.assets.forEach(a => (root==='/') ? AppCache.push(`${a}`):AppCache.push(`${root}${a}`));
@@ -197,12 +196,6 @@ self.addEventListener('message', async (e) => {
 
 self.addEventListener('fetch', async e => {
 
-    if (AppCache.length === 0) {
-        let cc = await caches.open(sr_version);
-        let curr = await cc.keys();
-        curr.forEach((e => AppCache.push(e.url.replace(location.origin, ''))));
-    }
-
     leak = e;
     
     if (app_error) {console.error('🛑 [SkyRoutes] App Error, re-check manifest');northBridge({req:'error', data:'App Error, please try later'});}
@@ -226,6 +219,12 @@ self.addEventListener('fetch', async e => {
         try{
             e.respondWith(r)
         } catch (e) {}
+    }
+
+    if (AppCache.length === 0) {
+        let cc = await caches.open(sr_version);
+        let curr = await cc.keys();
+        curr.forEach((e => AppCache.push(e.url.replace(location.origin, ''))));
     }
 
     // cache serve
