@@ -79,14 +79,14 @@
     </header>
     <div id="dwrap">
         <br><br>
-        <span>App Files</span>
+        <span>Framework Core Files</span>
         <ul>
             <li><b>index.html : </b>It is used as a container, only add meta info and dependencies to this file</li>
-            <li><b>app.html : </b>The usual markup goes here, this is automatically injected into index.html </li>
+            <li><b>app.html : </b>Write the usual markup here, this is automatically injected into index.html </li>
             <li><b>mainfest.json : </b> Provides app info and skyroute definitions to the Browser</li>
             <li><b>sw.js : </b> Our service worker file, SkyRoutes takes care of everything here, only to push a
                 force
-                upgrade edit the force_upgrade_string</li>
+                upgrade, edit the 'force_upgrade_string'</li>
             <li><b>skyroutes.js, skyroutes.css : </b> SkyRoutes core files</li>
         </ul>
 
@@ -110,21 +110,12 @@
                     <td>Valid or empty String</td>
                     <td>App name for splash screen, on empty defaults to 'SkyRoutes'</td>
                 </tr>
-                <tr>
-                    <td>author</td>
-                    <td>String</td>
-                    <td>For reference</td>
-                </tr>
-                <tr>
-                    <td>logo</td>
-                    <td>Valid path as String or empty</td>
-                    <td>App logo for splash screen, on empty deafults to skyroutes logo</td>
-                </tr>
+        
+               
                 <tr>
                     <td>assets</td>
                     <td>Array of Valid paths as String</td>
-                    <td>This is used for specifing files to be cached by the PWA, you can edit this string anytime, on
-                        empty array the whole app cache is erased</td>
+                    <td>This is used for specifing files to be cached by the PWA, you can edit this string anytime</td>
                 </tr>
                 <tr>
                     <td>hot_reload</td>
