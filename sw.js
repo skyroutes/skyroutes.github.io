@@ -146,7 +146,7 @@ self.addEventListener('message', async (e) => {
         }
 
         if (app_error === false){ 
-            console.log("✅ App Init completed");
+            console.log('✅ [SkyRoutes] App Init completed');
             northBridge({ req: "update" });
         }
         
@@ -160,7 +160,7 @@ self.addEventListener('message', async (e) => {
         }
     
         AppManifest = data.manifest;
-        console.log('✅ App running');
+        console.log('✅ [SkyRoutes] App running');
 
         if (req === 'atomic') {
     
@@ -189,6 +189,7 @@ self.addEventListener('message', async (e) => {
 
     } else if (req === 'gracenav') {
         grab_navigation = false;
+
     }
 
 });

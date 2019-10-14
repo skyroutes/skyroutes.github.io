@@ -78,29 +78,26 @@
         <p>Documentation</p>
     </header>
     <div id="dwrap">
-        <span>Sample App Structure</span>
-        <img src="assets/doc1.png">
         <br><br>
-        <span>App Core</span>
+        <span>App Files</span>
         <ul>
-            <li><b>index.html</b> is used as a container, only add meta info and dependencies to this file</li>
-            <li><b>app.html</b> is where for the usual markup goes, this is automatically injected into index.html </li>
-            <li><b>main.js</b> is used as the entry point for JavaScript</li>
-            <li><b>mainfest.json</b> provides PWA's info to the Browser, update this file accordingly</li>
-            <li><b>sw.js</b> is our service worker file, SkyRoutes takes care of everything here, only to push a force
+            <li><b>index.html : </b>It is used as a container, only add meta info and dependencies to this file</li>
+            <li><b>app.html : </b>The usual markup goes here, this is automatically injected into index.html </li>
+            <li><b>mainfest.json : </b> Provides app info and skyroute definitions to the Browser</li>
+            <li><b>sw.js : </b> Our service worker file, SkyRoutes takes care of everything here, only to push a
+                force
                 upgrade edit the force_upgrade_string</li>
+            <li><b>skyroutes.js, skyroutes.css : </b> SkyRoutes core files</li>
         </ul>
 
         <span>Note</span>
         <ul>
             <li>The location of the core files is crucial for the framework to function</li>
-            <li>In the current release SkyRoutes is designed to only work under a root domain (example.com), it will not
-                work with subdomains (example.com/pwa)</li>
         </ul>
 
         <span>Initializing our app</span>
-        <img src="assets/doc2.png">
-        <span>We need to initialize a myApp Object in our main.js file</span>
+        <img src="assets/doc1.png">
+        <span>We need to initialize a <b>skyroutes</b> object in our main.js file</span>
         <div id="tabc">
             <table>
                 <tr>
@@ -158,18 +155,6 @@
                     <td>-1/0/int in minutes</td>
                     <td>atomic updates disabled / atomic updates every reload / atomic updates after duration (in
                         minutes)</td>
-                </tr>
-
-                <tr>
-                    <td>anti_scrape</td>
-                    <td>true/false</td>
-                    <td>(WIP) Halt app if being web scraped</td>
-                </tr>
-
-                <tr>
-                    <td>change</td>
-                    <td>String</td>
-                    <td>For internal reference</td>
                 </tr>
 
             </table>

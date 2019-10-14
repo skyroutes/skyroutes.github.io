@@ -23,7 +23,7 @@
       "assets/doc1.png"
     ],
     
-    "update_interval": "1",
+    "update_interval": "5",
     "hot_reload": "css",
     "route_error": "free",
     "force_install": "false",
