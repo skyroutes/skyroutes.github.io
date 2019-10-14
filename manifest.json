@@ -3,7 +3,7 @@
   "short_name": "SkyRoutes",
   "background_color": "#fff",
   "theme_color": "#FFD45E",
-  "start_url": "",
+  "start_url": "/",
   "display": "standalone",
   "icons": [
     {
