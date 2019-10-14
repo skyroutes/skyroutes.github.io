@@ -3,7 +3,7 @@
   "short_name": "SkyRoutes",
   "background_color": "#fff",
   "theme_color": "#FFD45E",
-  "start_url": "/",
+  "start_url": "",
   "display": "standalone",
   "icons": [
     {
@@ -24,7 +24,7 @@
     ],
     
     "update_interval": "5",
-    "hot_reload": "css",
+    "hot_reload": "false",
     "route_error": "free",
     "force_install": "false",
     "force_network": "false"
