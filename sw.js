@@ -8,7 +8,7 @@
 */
 
 
-const force_upgrade_string = "Please save me";
+const force_upgrade_string = "Let there be light";
 const sr_version = "2.0";
 let AppCache = [];
 let AppManifest;
@@ -18,8 +18,6 @@ let grab_navigation = true;
 let app_error = false;
 
 let serve_cache = true;
-// ______________________________________________
-
 
 let leak;
 let leaks = [];

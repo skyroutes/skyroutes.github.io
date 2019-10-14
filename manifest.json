@@ -20,7 +20,7 @@
 
   "skyroutes": {
     "assets": [
-      "assets/doc1.png"
+      "/assets/doc1.png"
     ],
     
     "update_interval": "5",
