@@ -15,13 +15,19 @@
       "src": "assets/sr.png",
       "sizes": "144x144",
       "type": "image/png"
+    },
+    { 
+      "src": "/assets/srs.jpeg"
     }
   ],
 
   "skyroutes": {
+
     "assets": [
       "/assets/doc1.png",
-      "/assets/srs.jpeg"
+      "/assets/srs.jpeg",
+      "/style.css",
+      "/app.html"
     ],
     
     "update_interval": "5",
