@@ -90,6 +90,10 @@ section {
         flex-wrap: wrap;
         align-items: stretch;
     }
+    
+    table {
+        overflow-x: scroll;
+    }
 }
 
 /* screen 2 */
@@ -165,9 +169,7 @@ section {
     margin-bottom: 15px;
 }
 
-table {
-    overflow-x: scroll;
-}
+
 
 table, th, td {
     padding: 9px;
