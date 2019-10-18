@@ -54,7 +54,7 @@
 .vis {
     /* display: default; */
     display: block !important;
-    animation: fade 0.4s;
+    animation: fade 0.3s;
 }
 
 .viss {
