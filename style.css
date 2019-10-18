@@ -196,7 +196,7 @@ tr:nth-child(even) {
 
 @media (prefers-color-scheme: dark) {
     body, #features header, #doc header, #changelog header, #about header, .card, .card p {
-        background: rgb(39, 39, 39) !important;
+        background: #35363a !important;
         color: #e0e0e0 !important;
     }
 
