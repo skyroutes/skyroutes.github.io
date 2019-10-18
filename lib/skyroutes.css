@@ -121,7 +121,7 @@
 
 @media (prefers-color-scheme: dark) {
     #sr_intr {
-        background: rgb(39, 39, 39) !important;
+        background: #35363a !important;
         color: #f5f5f5 !important;
     }
 
