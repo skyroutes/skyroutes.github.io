@@ -34,13 +34,16 @@
 }
 
 @keyframes fadeout {
-    0%{opacity: 1;}
-    100% {opacity: 0;}
+    0%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .wpr {
-    animation: fadeout 350ms;
-    overflow: hidden;
+    animation: fadeout 0.2s;
 }
 
 @keyframes fade {
@@ -51,7 +54,7 @@
 .vis {
     /* display: default; */
     display: block !important;
-    animation: fade 0.65s;
+    animation: fade 0.4s;
 }
 
 .viss {
