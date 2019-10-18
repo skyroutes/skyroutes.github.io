@@ -1,3 +1,13 @@
+/*
+    SKYROUTES 2.0.1
+
+    Copyright © 2019 Aakash Pandey. All rights reserved.
+    Use of this source code is governed by a license that can be
+    found in the LICENSE file.
+
+*/
+
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +31,16 @@
 
 .rt, .irt {
     display: none;
+}
+
+@keyframes fadeout {
+    0%{opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.wpr {
+    animation: fadeout 350ms;
+    overflow: hidden;
 }
 
 @keyframes fade {
@@ -55,7 +75,7 @@
 }
 
 #sr_intr img {
-    width: 82px;
+    width: 120px;
     margin-top: 180px;
 }
 
@@ -93,4 +113,16 @@
     }
 
 
+}
+
+
+@media (prefers-color-scheme: dark) {
+    #sr_intr {
+        background: rgb(39, 39, 39) !important;
+        color: #f5f5f5 !important;
+    }
+
+    #sr_intr div, #sr_intr p {
+        color: rgb(235, 235, 235);
+    }
 }

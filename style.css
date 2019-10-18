@@ -1,9 +1,6 @@
 * {
     font-family: 'Helvetica';
-    transition: all 0.4s;
     user-select: none;
-    
-    background: white;
 }
 
 :root {
@@ -72,10 +69,11 @@ section {
 
 #home img {
     padding: 20px;
-    width: 130px;
+    width: 170px;
     display: block;
     margin: 0 auto;
     border-radius: 50%;
+    transition: 0.5s;
 }
 
 #home img:hover {
@@ -90,10 +88,11 @@ section {
         flex-wrap: wrap;
         align-items: stretch;
     }
-    
-    table {
-        overflow-x: scroll;
-    }
+
+    #tabc {
+        width: 100%;
+        overflow-x: hidden !important;
+    } 
 }
 
 /* screen 2 */
@@ -169,8 +168,6 @@ section {
     margin-bottom: 15px;
 }
 
-
-
 table, th, td {
     padding: 9px;
     line-height: 30px;
@@ -193,7 +190,33 @@ tr:nth-child(even) {
 }
 
 #tabc {
-    width: 100%;
-    overflow: scroll;
-
+    overflow-x: scroll;
 }
+
+
+@media (prefers-color-scheme: dark) {
+    body, #features header, #doc header, #changelog header, #about header, .card, .card p {
+        background: rgb(39, 39, 39) !important;
+        color: #e0e0e0 !important;
+    }
+
+    #home h1, #home p {
+        color: rgb(233, 233, 233);
+
+    }
+    #home p {
+        color: rgb(194, 194, 194);
+    }
+
+    tr:nth-child(even) {
+        background-color: rgb(29, 29, 29);
+    }    
+
+    a {
+        color: rgb(255, 237, 167);
+    }
+    a:visited {
+        color: rgb(145, 199, 64);
+    }
+}
+  

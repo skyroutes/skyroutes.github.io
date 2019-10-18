@@ -1,3 +1,13 @@
+<!--
+    ___         __              __       ____                  __
+   /   | ____ _/ /______ ______/ /_     / __ \____ _____  ____/ /__  __  __
+  / /| |/ __ `/ //_/ __ `/ ___/ __ \   / /_/ / __ `/ __ \/ __  / _ \/ / / /
+ / ___ / /_/ / ,< / /_/ (__  ) / / /  / ____/ /_/ / / / / /_/ /  __/ /_/ /
+/_/  |_\__,_/_/|_|\__,_/____/_/ /_/  /_/    \__,_/_/ /_/\__,_/\___/\__, /
+                                                                  /____/
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,16 +15,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="cache-control" content="no-cache" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyApp</title>
+
     <link rel="stylesheet" href="lib/skyroutes.css">
     <link rel="manifest" href="manifest.json">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Chilanka|Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-    <title>SkyApp</title>
+
+    <link rel="stylesheet" href="style.css" class="style">
+
     <script>
         let AppError = false;
         window.onerror = (e, src, line, col) => {
-            document.querySelector('#sr_intr img').src = "assets/sr.jpeg";
+            document.querySelector('#sr_intr img').src = "assets/srt.png";
             document.querySelector('#sr_intr div').innerText = "SkyRoutes";
             document.querySelector('#sr_intr').style.display = 'block';
             document.querySelector('#sr_intr p').style.marginTop = "30px";
@@ -27,26 +42,18 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="style.css" class="style">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148516528-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-148516528-1');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148516528-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-148516528-1');
+    </script>
 </head>
 
-<body>
-    <div id="sr_intr"><img src="assets/sr.jpeg">
-        <div></div>
-        <p></p>
-    </div>
-    <div id="sr_main"></div>
-</body>
+<body><div id="sr_intr"><img src="assets/sr.jpeg"><div></div><p></p></div><div id="sr_main"></div></body>
 <script src="lib/skyroutes.js"></script>
 <script src="main.js"></script>
 
