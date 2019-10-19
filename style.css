@@ -73,7 +73,7 @@ section {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 #home img:hover {
