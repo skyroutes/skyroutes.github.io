@@ -24,13 +24,10 @@
   "skyroutes": {
 
     "assets": [
-      "/assets/doc1.png",
-      "/assets/srt.png",
-      "/style.css",
-      "/app.html"
+      "/assets/srt.png"
     ],
     
-    "update_interval": "10",
+    "update_interval": "2285",
     "hot_reload": "false",
     "route_error": "free",
     "force_install": "false",
