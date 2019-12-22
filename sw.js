@@ -118,8 +118,18 @@ const diff = async () => {
     assetScanner(nf);
 }
 
-// Events
+self.addEventListener('install', e => {
+    let root = location.pathname.replace('sw.js', '');
+    let preAppCache = [];
+    preAppCache.push(`${root}index.html`, `${root}lib/skyroutes.css`, `${root}lib/skyroutes.js`);
+    const preCache = async () => {
+        const c = await caches.open(sr_version);
+        return c.addAll(preAppCache);
+    };
+    e.waitUntil(preCache());
+})
 
+// Events
 self.addEventListener('message', async (e) => {
 
     let req = e.data.req;
@@ -131,11 +141,10 @@ self.addEventListener('message', async (e) => {
         let root = location.pathname.replace('sw.js', '');
         AppCache = [];
         AppManifest.skyroutes.assets.forEach(a => (root==='/') ? AppCache.push(`${a}`):AppCache.push(`${root}${a}`));
-        AppCache.push(`${root}index.html`, `${root}lib/skyroutes.css`, `${root}lib/skyroutes.js`);
 
         cache = await caches.open(sr_version);
 
-        try { await cache.addAll(AppCache); app_error = false }
+        try { await cache.addAll(AppCache); app_error = false;AppCache.push(`${root}index.html`, `${root}lib/skyroutes.css`, `${root}lib/skyroutes.js`); }
         catch (e) {
             console.error('🛑 Asset file error '+e);
             app_error = true
@@ -188,9 +197,7 @@ self.addEventListener('message', async (e) => {
         grab_navigation = false;
 
     }
-
 });
-
 
 //  jammer gen 5
 
