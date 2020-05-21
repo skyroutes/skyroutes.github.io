@@ -8,8 +8,8 @@
 */
 
 
-const force_upgrade_string = "Let there be drums";
-const sr_version = "2.1";
+const force_upgrade_string = "Let there be lights";
+const sr_version = "2.1.1";
 let AppCache = [];
 let AppManifest;
 let NewAppManifest;
